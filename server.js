@@ -2,10 +2,10 @@ var express = require("express");
 var app = express();
 let port = process.env.port ||3000;
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://studentassignments:admin@clusterstudent.2cssltu.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=ClusterStudent";
+const url = "mongodb+srv://studentassignments:admin@clusterstudent.2cssltu.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=ClusterStudent";
 //mongodb+srv://<username>:<password>@cluster0.scy2vud.mongodb.net/<database-name>?retryWrites=true&w=majority
 
-const client = new MongoClient(uri, {
+const client = new MongoClient(url, {
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
